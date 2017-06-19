@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :users, except: [:new, :index]
   get 'users/new', to: 'users#new', as: 'signup'
   get 'sessions/new', to: 'sessions#new', as: 'login'
-  resources :sessions, except: [:new, :index, :show]
   get '/logout', to: 'sessions#destroy', as: 'logout'
+  resources :sessions, except: [:new, :index, :show]
 
 end
